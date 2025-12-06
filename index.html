@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show Input Data</title>
+</head>
+<style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: #f7f7f7;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #e00b0b;
+            background: white;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: blue;
+            margin-bottom: 15px;
+        }
+        h2 {
+            margin: 5px 0;
+        }
+        .green-box {
+            width: 60%;
+            margin: 15px auto;
+            padding: 20px;
+            border: 2px solid rgb(19, 209, 35);
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #userInput {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #888;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #userInput:hover {
+            border-color: palevioletred;
+        }
+        button {
+            width: 120px;
+            height: 35px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+
+        .output-box {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+        .output-box p {
+            margin: 0;
+        }
+/* ------------------------ */
+/* RESPONSIVE MEDIA QUERIES */
+/* ------------------------ */
+/* Mobile Screens (up to 480px) */
+        @media (max-width: 480px) {
+            .container, .green-box {
+                width: 100%;
+                padding: 15px;
+            }
+            #userInput {
+                width: 90%;
+            }
+            button {
+                width: 100px;
+                height: 32px;
+            }
+            .output-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+/* Tablet Screens (481px to 768px) */
+        @media (max-width: 768px) {
+            .container, .green-box {
+                width: 80%;
+            }
+            #userInput {
+                width: 80%;
+            }
+            h1 {
+                font-size: 26px;
+            }
+        }
+    /* Large Screens (Desktop) */
+        @media (min-width: 1200px) {
+            .container, .green-box {
+                width: 50%;
+            }
+        }
+</style>
+<body> 
+    <!-- ffff -->
+<div class="container">
+   <h1 style="color: blue;">Banking ATM Working</h1>
+   
+</div>
+ <!-- kkkkk -->
+<div class="green-box">
+    <input type="text" id="userInput" placeholder="Type here..."  />
+    <button  onclick="showData()" >Submit</button>
+    <h3 style="color: purple;">Output:</h3>
+    <div class="p1 " style="display: flex; margin-left: 200px;">
+    <p style="color: peru;"> amount  = </p>
+    <p id="outputArea" style="margin-left: 20px;"></p>
+       <p id="outputAreaa" style="margin-left: 20px;"></p>
+</div>
+</div>
+
+ <script src="atm.js"></script>
+</body>
+</html>
